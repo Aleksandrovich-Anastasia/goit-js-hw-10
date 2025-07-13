@@ -9,4 +9,4 @@ import{s as i}from"./assets/sprite-Bj-bcaRk.js";/* empty css                    
               </svg>
               <span class="toast-text-acc">Error</span>
               <span class="toast-text">Rejected promise in ${t}ms</span>`,position:"topRight",icon:"",timeout:3e3,close:!1,class:"custom-toast custom-toast-error"})}),e.reset()});function c(s,o){return new Promise((a,t)=>{setTimeout(()=>{o==="fulfilled"?a(s):t(s)},s)})}
-//# sourceMappingURL=2-snakbar.js.map
+//# sourceMappingURL=2-snackbar.js.map
