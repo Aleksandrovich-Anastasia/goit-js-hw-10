@@ -1,5 +1,7 @@
 import iziToast from "izitoast";
 import "izitoast/dist/css/iziToast.min.css";
+import spriteUrl from '../img/sprite.svg';
+
 
 const form = document.querySelector('.form');
 
@@ -14,9 +16,10 @@ form.addEventListener('submit', event => {
       iziToast.success({
         message: `
           <svg class="toast-icon" width="24" height="24">
-            <use xlink:href="./img/sprite.svg#icon-ok"></use>
-          </svg>
-          <span class="toast-text-acc">OK</span><span class="toast-text">Fulfilled promise in ${delay}ms</span>`,
+                <use xlink:href="${spriteUrl}#icon-ok"></use>
+              </svg>
+              <span class="toast-text-acc">Error</span>
+              <span class="toast-text">Fulfilled promise in ${delay}ms</span>`,
         position: 'topRight',
         timeout: 3000,
         icon: '',
@@ -28,9 +31,10 @@ form.addEventListener('submit', event => {
       iziToast.error({
         message: `
           <svg class="toast-icon" width="24" height="24">
-            <use xlink:href="./img/sprite.svg#icon-error"></use>
-          </svg>
-          <span class="toast-text-acc">Error</span><span class="toast-text">Rejected promise in ${delay}ms</span>`,
+                <use xlink:href="${spriteUrl}#icon-error"></use>
+              </svg>
+              <span class="toast-text-acc">Error</span>
+              <span class="toast-text">Rejected promise in ${delay}ms</span>`,
         position: 'topRight',
         icon: '',
         timeout: 3000,

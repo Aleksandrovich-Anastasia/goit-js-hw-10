@@ -4,6 +4,8 @@ import iziToast from "izitoast";
 import "izitoast/dist/css/iziToast.min.css";
 import "../css/1-timer.css";
 import { English } from "flatpickr/dist/l10n/default.js";
+import spriteUrl from '../img/sprite.svg';
+
 
 // 🔧 Застосовуємо кастомну локаль глобально
 flatpickr.localize({
@@ -40,10 +42,11 @@ const options = {
     if (selectedDate <= new Date()) {
       iziToast.error({
         message: `
-          <svg class="toast-icon" width="24" height="24">
-            <use xlink:href="./img/sprite.svg#icon-error"></use>
-          </svg>
-          <span class="toast-text-acc">Error</span><span class="toast-text">Please choose a date in the future</span>`,
+    <svg class="toast-icon" width="24" height="24">
+      <use xlink:href="${spriteUrl}#icon-error"></use>
+    </svg>
+    <span class="toast-text-acc">Error</span>
+    <span class="toast-text">Please choose a date in the future</span>`,
         position: 'topRight',
         icon: '',
         timeout: 3000,
